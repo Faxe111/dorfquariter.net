@@ -1,0 +1,74 @@
+<script type="text/javascript">
+        window.cm4all.widgets.register('/ANFAHRT-KONTAKT/index.php/', '', 'STRATP_com_cm4all_wch_maps_49043951', 'STRATP_com_cm4all_wch_maps_49043951');
+      </script>
+          <script type="text/javascript">
+            (function() {
+              window.cm4all.Common.loadCss(
+                  ["/.cm4all/widgetres.php/com.cm4all.wch.maps/css/show.min.css?v=140"]
+              );
+
+              var deferred = jQuery.Deferred();
+              window.cm4all.widgets['STRATP_com_cm4all_wch_maps_49043951'].ready = (function() {
+                var ready = function ready(handler) {
+                  deferred.done(handler);
+                };
+                return deferred.promise(ready);
+              })();
+
+              window.cm4all.Common.requireLibrary(
+                  ["/.cm4all/widgetres.php/com.cm4all.wch.maps/js/show.min.js?v=140","https://www.bing.com/api/maps/mapcontrol?callback=cm4widget_fnBingMapsCallback&key=AjVxc0EdiSiYtDoSUTGORvk7ATjHeKxC15_xdddws6dcxQVguPuKUp58MQkZApNz"],
+                  function() {
+                    deferred.resolveWith(window.cm4all.widgets['STRATP_com_cm4all_wch_maps_49043951']);
+                  }
+              );
+            })();
+          </script>
+          
+    
+  <div id="C_STRATP_com_cm4all_wch_maps_49043951__" class="cm-widget-maps-show">
+  </div>
+  <script type='text/javascript'>
+  (function() {
+    'use strict';
+
+    // workaround for script block will be called two times (SW-1757)
+    window.cm4all.widgets['STRATP_com_cm4all_wch_maps_49043951'].init = function() {
+      // to prevent executed again (SW-1757)
+      if(window.cm4all.widgets['STRATP_com_cm4all_wch_maps_49043951'].init) {
+        window.cm4all.widgets['STRATP_com_cm4all_wch_maps_49043951'].init = undefined;
+      } else {
+        return;
+      }
+
+      // DEBUG
+      if(false) {
+        console.log(
+          "DEBUG: [C_STRATP_com_cm4all_wch_maps_49043951__]: init function called.",
+          new Error('No error, only to get call stack.').stack
+        );
+      }
+
+      new window.cm4widget.BingMaps({
+        params: {
+          address: 'Mesumer Straße 20, 48432 Rheine, Germany',
+          title: 'DorfQuartier',
+          description: "", // to preserve new line #18552
+          location: '52.236319,7.453573',
+          center: '52.23631916808133,7.453572999999993',
+          mapstyle: 'normal',
+          zoom: 14,
+          pincolor: 'rgba(0,0,0,0.7)',
+          showaddress: true
+        },
+        texts: {
+          directions: 'Routenplaner'
+        },
+        containerId: 'C_STRATP_com_cm4all_wch_maps_49043951__',
+        cPath: 'STRATP_com_cm4all_wch_maps_49043951',
+        devmode: false,
+      });
+    };
+
+    window.cm4all.widgets['STRATP_com_cm4all_wch_maps_49043951'].ready(window.cm4all.widgets['STRATP_com_cm4all_wch_maps_49043951'].init);
+  })();
+  </script>
